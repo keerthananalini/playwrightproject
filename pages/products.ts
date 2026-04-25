@@ -9,8 +9,9 @@ export class ProductPage{
     }
 
     async addFirstProductToCart(){
-        await this.page.locator('.product-image-wrapper').hover();
-        await this.page.locator('text=Add to cart').first().click()
+        const firstProduct = this.page.locator('.product-image-wrapper').nth(0);
+        await firstProduct.hover();
+        await this.page.locator('a[data-product-id="1"]').nth(1).click()
     }
 
     async viewCart(){
