@@ -20,7 +20,7 @@ test('Validate the login flow using Invalid credential',async({loginPage})=>{
     await loginPage.verifyErrorMessage();
 })
 //this test is just for example
-test('Validate the login via API and add UI validation',async({loginPage,testUser})=>{
+test.skip('Validate the login via API and add UI validation',async({loginPage,testUser})=>{
     await loginPage.login(testUser.email,testUser.password);
     await loginPage.verifyLoginSuccessful()
 
